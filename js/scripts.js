@@ -15,23 +15,31 @@ function processFormValues() {
 
         if (name1 === name2 && name1 === name3) {
             document.getElementById("equi").removeAttribute("class");
-        } else if (name2 !== name1 || name2 === name3) {
+        } else if (name2 === name1 || name2 === name3 || name1 === name3) {
             document.getElementById("isos").removeAttribute("class");
-        } else if (name3 !== name1 || name3 !== name2) {
-            document.getElementById("scal").removeAttribute("class");
         } else {
-            document.getElementById("sorry").removeAttribute("class");
+            document.getElementById("scal").removeAttribute("class");
         }
+    } else if (name1 < -1) {
+        document.getElementById("sorry").removeAttribute("class");
     }
 }
 
-function formSubmit(event) {
-    hideResults();
-    processFormValues();
-    event.preventDefault();
-}
 
 window.addEventListener("load", function () {
+
+    function formSubmit(event) {
+        hideResults();
+        processFormValues();
+        event.preventDefault();
+    }
+
     let form = document.querySelector("form");
-    form.addEventListener("submit", formSubmit);
+
+    form.addEventListener("submit", function () {
+        formSubmit(event);
+    });
+
+
 });
+
