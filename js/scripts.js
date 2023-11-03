@@ -25,12 +25,13 @@ function processFormValues() {
     }
 }
 
+function formSubmit(event) {
+    hideResults();
+    processFormValues();
+    event.preventDefault();
+}
+
 window.addEventListener("load", function () {
     let form = document.querySelector("form");
-    form.addEventListener("submit", function (event) {
-        hideResults();
-        processFormValues();
-        event.preventDefault();
-
-    });
+    form.addEventListener("submit", formSubmit);
 });
