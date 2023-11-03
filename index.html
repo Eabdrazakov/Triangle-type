@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/scripts.js"></script>
+    <title>Triangle Type Checker</title>
+</head>
+
+<body>
+    <h1>Triangle Type Checker</h1>
+    <form>
+        <label for="name1">Side 1: </label>
+        <input id="name1" type="number" name="name1"><br>
+        <label for="name2">Side 2: </label>
+        <input id="name2" type="number" name="name2"><br>
+        <label for="name3">Side 3: </label>
+        <input id="name3" type="number" name="name3"><br>
+        <button type="submit">Check</button>
+    </form>
+
+    <div id="equi" class="hidden">
+        <h4>Result:</h4>
+        <p>This is <strong>Equilateral Triangle.</strong></p>
+    </div>
+    <div id="isos" class="hidden">
+        <h4>Result:</h4>
+        <p>This is <strong>Isosceles Triangle.</strong></p>
+    </div>
+    <div id="scal" class="hidden">
+        <h4>Result:</h4>
+        <p>This is <strong>Scalene Triangle.</strong></p>
+    </div>
+    <div id="sorry" class="hidden">
+        <h4>Result:</h4>
+        <p><strong>Not a Triangle.</strong></p>
+    </div>
+</body>
