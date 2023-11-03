@@ -1,3 +1,4 @@
+//Business logic
 function hideResults() {
     document.getElementById("equi").setAttribute("class", "hidden");
     document.getElementById("isos").setAttribute("class", "hidden");
@@ -5,6 +6,7 @@ function hideResults() {
     document.getElementById("sorry").setAttribute("class", "hidden");
 }
 
+//User interface Logic
 function processFormValues() {
     hideResults();
     const name1 = parseInt(document.querySelector("input#name1").value);
