@@ -22,7 +22,7 @@ function processFormValues() {
         } else {
             document.getElementById("scal").removeAttribute("class");
         }
-    } else if (name1 < -1) {
+    } else if (name1 < -1 || name2 < -1 || name3 < -1) {
         document.getElementById("sorry").removeAttribute("class");
     }
 }
